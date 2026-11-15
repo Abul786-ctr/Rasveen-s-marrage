@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="page-title">Nikkah &amp; Valeema Invitation</title>
+
+<!-- ============================================================
+     ✏️  EDITABLE VARIABLES — Groom First in Message Section
+     ============================================================ -->
+<script>
+  const WED = {
+    groomName:         "A. Habeeb Hasan Ershath",
+    groomQual:         "(Sallamahu) BBA",
+    brideName:         "M. Rasveen",
+    brideQual:         "(Sallamaha) B.Sc. CDF",
+    groomNameAr:       "أ. حبيب حسن إرشاد",
+    brideNameAr:       "م. رسفين",
+    groomFamily:       "S/o (Late) Anwar Ali & Faridha Banu, Masinagudi",
+    brideFamily:       "D/o Mubarak & Shamshath, Masinagudi, The Nilgiris",
+    weddingDate:       "2027-01-20T11:00:00",   // ISO format
+    weddingDateLabel:  "Wednesday, 20th January 2027",
+    hijriDateLabel:    "Hijri 1448 • Shaban 11 Pirai",
+    nikaahTime:        "Nikkah Ceremony",
+    walimaTime:        "Feast Lunch (Valeema)",
+    venue:             "Mercy Hall, Mavanahalla Quiet Corner Camp Center",
+    venueAddress:      "Masinagudi, The Nilgiris District, Tamil Nadu",
+    compliments:       "With best compliments from: A. Mubarak & Brothers, Masinagudi, The Nilgiris Dt.",
+    phone1Display:     "84893 65492",
+    phone1Href:        "tel:+918489365492",
+    phone2Display:     "76391 45120",
+    phone2Href:        "tel:+917639145120",
+    mapsURL:           "https://maps.app.goo.gl/pFrk5xjjbmZnCidJA",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80",
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80",
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=900&q=80",
+      "https://images.unsplash.com/photo-1520854221256-17d7dc94a611?w=900&q=80",
+      "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=900&q=80",
+    ],
+  };
+</script>
+
+<style>
+/* ─── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Scheherazade+New:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap');
+
+/* ─── Reset & Tokens ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green-deep:   #0d3320;
+  --green-mid:    #1a5c38;
+  --green-soft:   #2d7a52;
+  --green-light:  #e8f5ee;
+  --gold:         #c9a84c;
+  --gold-light:   #e8c97a;
+  --gold-pale:    #fdf6e3;
+  --cream:        #faf8f2;
+  --text-dark:    #1a1a1a;
+  --text-mid:     #4a4a4a;
+  --text-muted:   #888;
+  --radius:       12px;
+  --transition:   0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* ─── Typography Helpers ──────────────────────────────────── */
+.font-arabic { font-family: 'Scheherazade New', serif; }
+.font-serif  { font-family: 'Cormorant Garamond', serif; }
+.font-sans   { font-family: 'Raleway', sans-serif; }
+
+/* ─── Scroll-Reveal ───────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.30s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.60s; }
+
+/* ─── Divider Ornament ────────────────────────────────────── */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 18px 0;
+  color: var(--gold);
+}
+.ornament::before, .ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  max-width: 120px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.ornament::after { background: linear-gradient(90deg, var(--gold), transparent); }
+.ornament span { font-size: 1.3rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════════════ */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px 80px;
+  overflow: hidden;
+  background: var(--green-deep);
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(201,168,76,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(201,168,76,0.10) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.06'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(201,168,76,0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  width: 100%;
+}
+
+.bismillah {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  color: var(--gold-light);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease both;
+}
+
+.bismillah-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 22px;
+  animation: fadeInDown 1s 0.1s ease both;
+}
+
+.hero-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  animation: fadeInDown 1s 0.2s ease both;
+}
+
+.hero-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 6.5vw, 4.4rem);
+  color: #fff;
+  line-height: 1.15;
+  animation: fadeInUp 1s 0.3s ease both;
+}
+
+.hero-qual {
+  display: block;
+  font-size: 0.34em;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.hero-names .ampersand {
+  color: var(--gold);
+  font-style: italic;
+  display: block;
+  font-size: 0.55em;
+  margin: 10px 0;
+}
+
+.hero-names-ar {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.2rem, 4vw, 1.9rem);
+  color: rgba(255,255,255,0.55);
+  margin-top: 16px;
+  animation: fadeInUp 1s 0.5s ease both;
+}
+
+.hero-date-chip {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 10px 28px;
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-light);
+  animation: fadeIn 1.2s 0.7s ease both;
+}
+
+.hero-hijri-chip {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: rgba(232, 201, 122, 0.75);
+  text-transform: uppercase;
+  animation: fadeIn 1.2s 0.85s ease both;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: fadeIn 2s 1.5s ease both;
+}
+.scroll-hint .arrow {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, var(--gold));
+  animation: scrollPulse 1.8s infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTIONS SHARED
+═══════════════════════════════════════════════════════════════ */
+.section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--green-deep);
+  line-height: 1.2;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DATE & TIME
+═══════════════════════════════════════════════════════════════ */
+#date-section {
+  background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-mid) 100%);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#date-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9a84c' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3C/g%3E%3C/svg%3E");
+}
+.date-inner {
+  position: relative;
+  max-width: 740px;
+  margin: 0 auto;
+}
+.date-section-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.date-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 5vw, 2.9rem);
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.date-hijri {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 32px;
+}
+
+.time-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.time-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius);
+  padding: 24px 30px;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+  backdrop-filter: blur(4px);
+}
+.time-card-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.time-card-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.time-card-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INVITATION MESSAGE (3rd Page — Above Gallery)
+═══════════════════════════════════════════════════════════════ */
+#message-section {
+  background: var(--gold-pale);
+  padding: 80px 20px;
+  text-align: center;
+}
+.message-box {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 46px 40px;
+  background: #fff;
+  border-radius: 16px;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+  position: relative;
+}
+.message-box::before {
+  content: '❝';
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  line-height: 44px;
+  text-align: center;
+}
+.salam-greeting {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  margin-bottom: 16px;
+}
+.message-arabic {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  color: var(--green-mid);
+  line-height: 2;
+  margin-bottom: 14px;
+  direction: rtl;
+}
+.message-english {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  color: var(--text-mid);
+  line-height: 1.85;
+  font-style: italic;
+}
+.couple-block {
+  margin: 22px 0;
+  padding: 22px 20px;
+  background: var(--cream);
+  border-radius: 12px;
+  border: 1px solid rgba(201,168,76,0.25);
+}
+.couple-person-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+.couple-person-qual {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.couple-person-parent {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+}
+.couple-with {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin: 14px 0;
+}
+.family-names {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(201,168,76,0.4);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+.family-names strong { color: var(--green-mid); font-weight: 600; }
+
+/* ═══════════════════════════════════════════════════════════════
+   GALLERY SLIDER
+═══════════════════════════════════════════════════════════════ */
+#gallery-section {
+  padding: 70px 0;
+  background: var(--green-deep);
+  overflow: hidden;
+}
+.gallery-header {
+  text-align: center;
+  margin-bottom: 36px;
+  padding: 0 20px;
+}
+.gallery-header .section-tag { color: var(--gold); }
+.gallery-header .section-title { color: #fff; }
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.82);
+}
+.slide-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(13,51,32,0.75);
+  color: var(--gold-light);
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(201,168,76,0.3);
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(201,168,76,0.85);
+  border: none;
+  color: var(--green-deep);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.slider-btn:hover { background: var(--gold); }
+.slider-btn.prev { left: 16px; }
+.slider-btn.next { right: 16px; }
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.3);
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dot.active { background: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════════
+   COUNTDOWN
+═══════════════════════════════════════════════════════════════ */
+#countdown-section {
+  padding: 80px 20px;
+  background: var(--cream);
+  text-align: center;
+}
+.countdown-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+.cd-box {
+  background: var(--green-deep);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 24px 20px 18px;
+  min-width: 90px;
+  position: relative;
+  overflow: hidden;
+}
+.cd-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.12), transparent 60%);
+  pointer-events: none;
+}
+.cd-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--gold-light);
+}
+.cd-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-top: 8px;
+}
+.countdown-msg {
+  margin-top: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--green-mid);
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VENUE
+═══════════════════════════════════════════════════════════════ */
+#venue-section {
+  background: linear-gradient(160deg, var(--green-deep) 0%, #0a2818 100%);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#venue-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50Z' fill='none' stroke='%23c9a84c' stroke-width='0.5' stroke-opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+}
+.venue-inner {
+  position: relative;
+  max-width: 660px;
+  margin: 0 auto;
+}
+.venue-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+  font-weight: 300;
+  color: #fff;
+  margin: 16px 0 10px;
+  line-height: 1.25;
+}
+.venue-address {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+.btn-maps {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--green-deep);
+  text-decoration: none;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-maps:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-maps svg { width: 18px; height: 18px; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTACT / CALL SECTION
+═══════════════════════════════════════════════════════════════ */
+#rsvp-section {
+  padding: 80px 20px;
+  background: var(--gold-pale);
+  text-align: center;
+}
+.rsvp-card {
+  max-width: 540px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px 36px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+.rsvp-emoji { font-size: 2.4rem; margin-bottom: 16px; }
+.rsvp-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.call-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-deep);
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 20px rgba(13,51,32,0.18);
+}
+.btn-call:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(13,51,32,0.26);
+}
+.btn-call svg { width: 18px; height: 18px; fill: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════════ */
+footer {
+  background: var(--green-deep);
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  padding: 36px 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+footer .footer-gold { color: var(--gold); font-size: 0.92rem; }
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE TRANSITION OVERLAY
+═══════════════════════════════════════════════════════════════ */
+#page-cover {
+  position: fixed;
+  inset: 0;
+  background: var(--green-deep);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  animation: coverFadeOut 1s 1.2s forwards;
+  pointer-events: none;
+}
+.cover-bismillah {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  color: var(--gold-light);
+  animation: fadeIn 0.8s 0.3s both;
+}
+.cover-spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(201,168,76,0.25);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite, fadeIn 0.5s 0.5s both;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KEYFRAMES
+═══════════════════════════════════════════════════════════════ */
+@keyframes fadeIn        { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fadeInDown    { from { opacity: 0; transform: translateY(-24px) } to { opacity: 1; transform: none } }
+@keyframes fadeInUp      { from { opacity: 0; transform: translateY(24px) } to { opacity: 1; transform: none } }
+@keyframes scrollPulse   { 0%,100%{opacity:.3} 50%{opacity:1} }
+@keyframes spin          { to { transform: rotate(360deg) } }
+@keyframes coverFadeOut  { to { opacity:0; pointer-events:none } }
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .slide img { height: 280px; }
+  .message-box { padding: 36px 20px; }
+  .rsvp-card { padding: 36px 20px; }
+  .time-cards { gap: 12px; }
+  .time-card { padding: 20px 18px; min-width: 100%; }
+  .cd-box { min-width: 72px; padding: 18px 12px 14px; }
+  .cd-num { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Page Transition Cover ──────────────────────────────── -->
+<div id="page-cover">
+  <div class="cover-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <div class="cover-spinner"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     1st PAGE: HERO (Groom First, Bride Second)
+═══════════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <p class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <p class="bismillah-en">In the name of Allah, the Most Beneficent and the Most Merciful</p>
+    <p class="hero-label">Nikkah &amp; Valeema Invitation</p>
+    <div class="hero-names">
+      <div>
+        <span id="hero-groom"></span>
+        <span class="hero-qual" id="hero-groom-qual"></span>
+      </div>
+      <span class="ampersand">&amp;</span>
+      <div>
+        <span id="hero-bride"></span>
+        <span class="hero-qual" id="hero-bride-qual"></span>
+      </div>
+    </div>
+    <div class="hero-names-ar" id="hero-names-ar"></div>
+    <div class="hero-date-chip" id="hero-date-chip"></div>
+    <div class="hero-hijri-chip" id="hero-hijri-chip"></div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="arrow"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     2nd PAGE: DATE & TIME
+═══════════════════════════════════════════════════════════════ -->
+<section id="date-section">
+  <div class="date-inner">
+    <div class="date-section-tag reveal">— Insha Allah • Save the Date —</div>
+    <div class="ornament reveal reveal-delay-1"><span>✦</span></div>
+    <div class="date-big reveal reveal-delay-2" id="date-big"></div>
+    <div class="date-hijri reveal reveal-delay-2" id="date-hijri"></div>
+    <div class="time-cards reveal reveal-delay-3">
+      <div class="time-card">
+        <div class="time-card-label">Auspicious Occasion</div>
+        <div class="time-card-time" id="nikaah-time"></div>
+        <div class="time-card-sub">Mercy Hall<br/>Mavanahalla Quiet Corner Camp Center</div>
+      </div>
+      <div class="time-card">
+        <div class="time-card-label">Wedding Feast</div>
+        <div class="time-card-time" id="walima-time"></div>
+        <div class="time-card-sub">Mercy Hall<br/>Mavanahalla Quiet Corner Camp Center</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     3rd PAGE: INVITATION MESSAGE (Groom First, Bride Second)
+═══════════════════════════════════════════════════════════════ -->
+<section id="message-section">
+  <div class="section">
+    <div class="section-tag reveal">— With Joyful Hearts —</div>
+    <h2 class="section-title reveal reveal-delay-1">You Are Cordially Invited</h2>
+    <div class="ornament reveal reveal-delay-2"><span>☽</span></div>
+    <div class="message-box reveal reveal-delay-3">
+      <p class="salam-greeting">Assalamu Alaikum (Warah)</p>
+      <p class="message-arabic">
+        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+      </p>
+      <p class="message-english">
+        "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."<br/>
+        <small style="color:var(--gold);letter-spacing:.05em;">— Quran 30:21</small>
+      </p>
+      <div class="ornament"><span>✦</span></div>
+      <p class="message-english" style="margin-bottom:16px;font-style:normal;">
+        <strong style="color:var(--green-deep);font-size:1.15em;">Mubarak &amp; Shamshath</strong><br/>
+        <span style="font-size:0.95rem;color:var(--text-muted);">(Masinagudi, The Nilgiris)</span><br/><br/>
+        We cordially invite you to the auspicious occasion of the <strong>Nikkah Ceremony</strong> of
+      </p>
+
+      <div class="couple-block">
+        <div class="couple-person-name" id="msg-groom-name"></div>
+        <div class="couple-person-qual" id="msg-groom-qual"></div>
+        <div class="couple-person-parent" id="msg-groom-family"></div>
+
+        <div class="couple-with">with</div>
+
+        <div class="couple-person-name" id="msg-bride-name"></div>
+        <div class="couple-person-qual" id="msg-bride-qual"></div>
+        <div class="couple-person-parent" id="msg-bride-family"></div>
+      </div>
+
+      <p class="family-names" id="msg-compliments"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     4th PAGE: GALLERY SLIDER
+═══════════════════════════════════════════════════════════════ -->
+<section id="gallery-section">
+  <div class="gallery-header">
+    <div class="section-tag reveal">— Moments —</div>
+    <h2 class="section-title reveal reveal-delay-1">Blessed Union</h2>
+    <div class="ornament reveal reveal-delay-2" style="color:var(--gold);max-width:400px;margin:18px auto;"><span>✦</span></div>
+  </div>
+  <div class="slider-wrapper reveal">
+    <div class="slider-track" id="slider-track"></div>
+    <button class="slider-btn prev" onclick="slideMove(-1)">&#8592;</button>
+    <button class="slider-btn next" onclick="slideMove(1)">&#8594;</button>
+  </div>
+  <div class="slider-dots" id="slider-dots"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     COUNTDOWN
+═══════════════════════════════════════════════════════════════ -->
+<section id="countdown-section">
+  <div class="section-tag reveal">— Insha Allah —</div>
+  <h2 class="section-title reveal reveal-delay-1">Counting Down To The Blessed Day</h2>
+  <div class="ornament reveal reveal-delay-2"><span>✦</span></div>
+  <div class="countdown-grid reveal reveal-delay-3">
+    <div class="cd-box"><div class="cd-num" id="cd-days">00</div><div class="cd-label">Days</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-hours">00</div><div class="cd-label">Hours</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-mins">00</div><div class="cd-label">Minutes</div></div>
+    <div class="cd-box"><div class="cd-num" id="cd-secs">00</div><div class="cd-label">Seconds</div></div>
+  </div>
+  <p class="countdown-msg reveal reveal-delay-4" id="cd-msg"></p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VENUE
+═══════════════════════════════════════════════════════════════ -->
+<section id="venue-section">
+  <div class="venue-inner">
+    <div class="section-tag reveal" style="color:var(--gold);">— Nikkah &amp; Feast Lunch Venue —</div>
+    <div class="ornament reveal reveal-delay-1" style="color:var(--gold);"><span>✦</span></div>
+    <div class="venue-name reveal reveal-delay-2" id="venue-name"></div>
+    <div class="venue-address reveal reveal-delay-3" id="venue-address"></div>
+    <a class="btn-maps reveal reveal-delay-4" id="venue-map-btn" href="#" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Open in Google Maps
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT / CALL
+═══════════════════════════════════════════════════════════════ -->
+<section id="rsvp-section">
+  <div class="section">
+    <div class="section-tag reveal">— Get In Touch —</div>
+    <h2 class="section-title reveal reveal-delay-1">Contact</h2>
+    <div class="ornament reveal reveal-delay-2"><span>✦</span></div>
+    <div class="rsvp-card reveal reveal-delay-3">
+      <div class="rsvp-emoji">🤍</div>
+      <p class="rsvp-text">
+        We would be honoured by your presence and du'a.<br/>
+        For any queries or directions, please feel free to call us.<br/>
+        <em style="color:var(--gold);font-size:.92em;">JazakAllahu Khairan</em>
+      </p>
+      <div class="call-buttons">
+        <a class="btn-call" id="call-btn-1" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span id="call-text-1"></span>
+        </a>
+        <a class="btn-call" id="call-btn-2" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span id="call-text-2"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER (Groom First, Bride Second)
+═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <p style="font-family:'Scheherazade New',serif;font-size:1.15rem;color:var(--gold);margin-bottom:8px;">
+    بَارَكَ اللهُ لَكُمْ وَبَارَكَ عَلَيْكُمْ وَجَمَعَ بَيْنَكُمْ فِي خَيْرٍ
+  </p>
+  <p style="font-size:.8rem;letter-spacing:.05em;color:rgba(255,255,255,.45);margin-top:6px;">
+    May Allah bless you and bestow His blessings upon you and unite you in goodness.
+  </p>
+  <p style="margin-top:18px;" id="footer-names"></p>
+</footer>
+
+<script>
+/* ── Inject Dynamic Content ─────────────────────────────── */
+document.title = `${WED.groomName} & ${WED.brideName} — Nikkah & Valeema Invitation`;
+
+// First Page (Hero): Groom First, Bride Second
+document.getElementById('hero-groom').textContent        = WED.groomName;
+document.getElementById('hero-groom-qual').textContent   = WED.groomQual;
+document.getElementById('hero-bride').textContent        = WED.brideName;
+document.getElementById('hero-bride-qual').textContent   = WED.brideQual;
+document.getElementById('hero-names-ar').textContent     = `${WED.groomNameAr}  ✦  ${WED.brideNameAr}`;
+document.getElementById('hero-date-chip').textContent    = WED.weddingDateLabel;
+document.getElementById('hero-hijri-chip').textContent   = WED.hijriDateLabel;
+
+// Date & Time
+document.getElementById('date-big').textContent          = WED.weddingDateLabel;
+document.getElementById('date-hijri').textContent        = WED.hijriDateLabel;
+document.getElementById('nikaah-time').textContent       = WED.nikaahTime;
+document.getElementById('walima-time').textContent       = WED.walimaTime;
+
+// 3rd Page (Invitation Message): Groom First, Bride Second
+document.getElementById('msg-groom-name').textContent    = WED.groomName;
+document.getElementById('msg-groom-qual').textContent    = WED.groomQual;
+document.getElementById('msg-groom-family').textContent  = WED.groomFamily;
+document.getElementById('msg-bride-name').textContent    = WED.brideName;
+document.getElementById('msg-bride-qual').textContent    = WED.brideQual;
+document.getElementById('msg-bride-family').textContent  = WED.brideFamily;
+document.getElementById('msg-compliments').innerHTML     = `<strong>${WED.compliments}</strong><br/>📞 ${WED.phone1Display} &nbsp;|&nbsp; ${WED.phone2Display}`;
+
+// Venue & Contact
+document.getElementById('venue-name').textContent        = WED.venue;
+document.getElementById('venue-address').textContent     = WED.venueAddress;
+document.getElementById('venue-map-btn').href            = WED.mapsURL;
+
+document.getElementById('call-btn-1').href               = WED.phone1Href;
+document.getElementById('call-text-1').textContent       = WED.phone1Display;
+document.getElementById('call-btn-2').href               = WED.phone2Href;
+document.getElementById('call-text-2').textContent       = WED.phone2Display;
+
+// Last Page (Footer): Groom First, Bride Second
+document.getElementById('footer-names').innerHTML        = `<span class="footer-gold">${WED.groomName} &amp; ${WED.brideName}</span>`;
+
+/* ── Gallery Slider ────────────────────────────────────── */
+const captions = ['Nikkah & Valeema','Blessed Beginning','Together Always','Our Journey','New Chapter'];
+const track = document.getElementById('slider-track');
+const dotsEl = document.getElementById('slider-dots');
+let currentSlide = 0;
+
+WED.galleryImages.forEach((src, i) => {
+  const slide = document.createElement('div');
+  slide.className = 'slide';
+  slide.innerHTML = `<img src="${src}" alt="Wedding photo ${i+1}" loading="lazy"><div class="slide-caption">${captions[i] || 'Our Memory'}</div>`;
+  track.appendChild(slide);
+
+  const dot = document.createElement('div');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.onclick = () => goToSlide(i);
+  dotsEl.appendChild(dot);
+});
+
+function goToSlide(n) {
+  currentSlide = (n + WED.galleryImages.length) % WED.galleryImages.length;
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('active', i === currentSlide));
+}
+function slideMove(dir) { goToSlide(currentSlide + dir); }
+setInterval(() => slideMove(1), 4500);
+
+/* ── Countdown Timer ───────────────────────────────────── */
+const target = new Date(WED.weddingDate).getTime();
+function updateCountdown() {
+  const now  = Date.now();
+  const diff = target - now;
+  const msgEl = document.getElementById('cd-msg');
+  if (diff <= 0) {
+    ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
+    msgEl.textContent = 'Alhamdulillah — The blessed day has arrived! 🎊';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
+  document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+  document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+  msgEl.textContent = d > 0 ? `${d} day${d!==1?'s':''} until we say "Qabiltun"` : 'The day is almost here! 🤍';
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ── Scroll-Reveal ─────────────────────────────────────── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
